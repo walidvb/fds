@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+  <meta name="description" content="La Fête du slip - Festival des Sexualités">
+  <meta name="keywords" content="fete du slip, lausanne, sex, festival, penetration">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>La F&ecirc;te du Slip - Festival des Sexualit&eacute;s</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  
+  <script type="text/javascript">
+  $(document).ready(function(){
+	  var vid = $('.video iframe');
+	  var w = $(window);
+	  var banner = $('.banner');
+	  var title = $('.title');
+	  var info = $('.info');
+	  function init() {
+		  	  	var h = vid.height( 0.9*(w.height()-title.outerHeight(true)-info.outerHeight(true)) ).height();
+		  	  	vid.width(h/540*960);
+		  	  	banner.width()
+	  }
+	  init();
+	  $(window).resize(init);
+  })
+  </script>
+
+  <!--[if IE]>
+  <style type="text/css">
+	</style>
+  <![endif]-->
+  </head>
+
+<body>
+<!-- Created by vbbros.net, come and visit! -->
+<div id="content">
+
+	<div class="title">
+		<div id="logo">
+			La Fete Du Slip
+		</div>
+		<div id="description">
+			Festival des Sexualit&eacute;s
+		</div>
+	</div>
+	
+	<div class="video">
+		<div class="banner-cont">
+			<a class="banner" href="http://wemakeit.ch" target="_blank"></a>
+		</div>
+		<iframe src="http://player.vimeo.com/video/57418897?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179"frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+	</div>
+	
+	<div class="info">
+		<div id="place">
+			Lausanne
+		</div>
+		<div id="mail">
+				<a href="mailto:info@lafeteduslip.ch">info@lafeteduslip.ch</a> 
+		</div>		
+		<div id="date">
+			<div>
+				8-10 mars 2013
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27024782-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+
+
+</html>
+
