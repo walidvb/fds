@@ -8,23 +8,6 @@
 
   <title>La F&ecirc;te du Slip - Festival des Sexualit&eacute;s</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  
-  <script type="text/javascript">
-  $(document).ready(function(){
-	  var vid = $('.video iframe');
-	  var w = $(window);
-	  var banner = $('.banner');
-	  var title = $('.title');
-	  var info = $('.info');
-	  function init() {
-		  	  	var h = vid.height( 0.9*(w.height()-title.outerHeight(true)-info.outerHeight(true)) ).height();
-		  	  	vid.width(h/540*960);
-		  	  	banner.width()
-	  }
-	  init();
-	  $(window).resize(init);
-  })
-  </script>
 
   <!--[if IE]>
   <style type="text/css">
@@ -37,19 +20,19 @@
 <div id="content">
 
 	<div class="title">
-		<div id="logo">
-			La Fete Du Slip
+		<div id="logos">
+			<h1 id="logo"><a href="http://www.lafeteduslip.ch">La Fete Du Slip</a></h1>
 		</div>
 		<div id="description">
-			Festival des Sexualit&eacute;s
+			Festival des Sexualites
 		</div>
 	</div>
 	
 	<div class="video">
 		<div class="banner-cont">
-			<a class="banner" href="http://wemakeit.ch" target="_blank"></a>
+			<a class="banner" href="http://wemakeit.ch/projects/la-fete-du-slip-festival-of-sexualities?locale=fr" target="_blank"></a>
 		</div>
-		<iframe src="http://player.vimeo.com/video/57418897?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179"frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+		<iframe src="http://player.vimeo.com/video/57418897?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
 	</div>
 	
 	<div class="info">

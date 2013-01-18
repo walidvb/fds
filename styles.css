@@ -1,7 +1,7 @@
 /*------------------ General ------------------*/
 @font-face { 
 	font-family: 'antique';
-	src: url('./Antique.ttf');
+	src: url('./Antique');
 }
 
 @font-face {
@@ -13,14 +13,13 @@
 body{
     background-color: rgba(239, 0, 125, 1);
     background-image: url("background-both.png"); 
-     background-position: center center;
-    font-family: Helvetica;
-    font-weight: 1000;  
+    background-position: center center;
+    font-family: antique, Helvetica;
+    font-weight: bold;  
     color: black;
     background-size: auto 100%;
-    margin: 60px 20px;
+    padding: 10px 20px;
     background-position: center;
-    stext-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
     -moz-transition: font-size 0.5s;
@@ -33,10 +32,13 @@ a:visited, a:link, a:hover{
 
 a:hover{
 	text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
-
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
 }
 
-a{
+a, #logo{
 	text-decoration: none;
 	color: inherit;
 	-webkit-transition: all 0.5s;
@@ -44,17 +46,30 @@ a{
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 }
+h1{
+	font-size: inherit;¨
+	margin: 0;
+	padding: 0;
+
+}
+#logo:hover{
+	box-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
 /* BIG PAGE */
 @media all and (min-width: 1471px){
 	body{
-	    font-size: 2.3em;
+	    font-size: 2.8em;
 	}
 	
 	.banner{
-		width: 350px;
-		height: 210px;
+		width: 320px;
+		height: 190px;
 		left: 580px;
-		top: 90px;
+		top: -95px;
 	}
 	
 	iframe{
@@ -66,14 +81,14 @@ a{
 /* MEDIUM PAGE */
 @media all and (max-width: 1470px) and (min-width: 550px){
 	body{
-	    font-size: 1.5em;
+	    font-size: 1.8em;
 	}
 	
 	.banner{
 		width: 230px;
 		height: 136px;
 		left: 430px;
-		top: 60px;
+		top: -63px;
 	}
 	
 	iframe{
@@ -83,18 +98,154 @@ a{
 }
 
 /* MOBILE */
-@media all and (max-width: 550px) {
+@media only screen 
+and (min-width : 321px) and (max-width : 550px) and (orientation : landscape){
+/* Styles */
 	body{
-	    font-size: 1em;
+	    font-size: 0.8em;
+	    padding: 5px 20px;
+	}
+	.banner{
+		width: 120px;
+		height: 70px;
+		left: 150px;
+		top: -35px;
+	}
+	
+	iframe{
+		width: 260px;
+		height: 146px;
+	}
+	
+	div.video{
+		margin: 20px 0px;
+		margin-bottom: 15px;
+	}
+
+	div.#logo, div.#date > div{
+		border: 3px solid black !important;
+	    border-radius: 2px 2px 2px 2px;
+	    margin: 0px 0;
+	}
+}
+
+@media only screen 
+and (min-width : 300px) and (max-width : 320px) and (orientation : portrait){
+	body{
+		text-shadow: 0px 0px 2px whitesmoke;
+	}
+	.title > div, .info > div{
+		margin: auto;
+		float: none!important;
+		width: 100%!important;
+		text-align: center;
+		display: inline-block!important;
+	}
+	
+	#description, #logo, #date, #place{
+		float: none!important;
+		text-align: center!important
+	}
+
+	 h1, #date > div{
+		margin: auto;
+		text-align: center;
+	}
+	.title, .info{
+		text-align: center;
+		opacity: 1;
+	}
+	
+	.banner{
+		width: 100px;
+		height: 58px;
+		left: 105px;
+		top: -23px;
+	}
+	
+	iframe{
+		width: 200px;
+		height: 112px;
+	}
+	
+	div.video{
+		margin: 20px 0px;
+		margin-bottom: 15px;
+	}
+
+	div.#logo, div.#date > div{
+		border: 3px solid white !important;
+	    border-radius: 2px 2px 2px 2px;
+	    margin: 0px 0;
+	}
+
+}
+
+/* IPAD */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	body{
+	    font-size: 1.3em;
+	    background-size: cover;
+	    
+	}
+	
+	.banner{
+		width: 180px;
+		height: 106px;
+		left: 300px;
+		top: -67px;
+	}
+	
+	iframe{
+		width: 600px;
+		height: 337px;
+	}
+	
+	div.video{
+		margin: 180px 0px;
+	}
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	body{
+	    font-size: 1.8em;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    display: inline-block;
+	    background-color: rgba(239, 0, 125, 1);
+	    height: 100%;
+	    padding: 15px 20px;
+	    margin: 0;
+	}
+	
+	.banner{
+		width: 230px;
+		height: 136px;
+		left: 380px;
+		top: -25px;
+	}
+	
+	iframe{
+		width: 800px;
+		height: 450px;
+	}
+	
+	div.video{
+		margin: 25px 0px;
+		margin-bottom: 20px;
 	}
 }
 /*------------------ /Media Queries--------------*/
 /*------------------ Site ------------------*/
 #content{
 	width: 100%;
-	height: 100%;
-	background-repeat: none;
-	background-size: cover;
 
 }
 
@@ -103,17 +254,12 @@ a{
 	  display:inline-block;
 	  opacity: 0.75;
 	  text-transform: uppercase;
-	  position: fixed;
-	  padding: 40px 20px;
-}
-
-.info{
-	bottom: 0px;
 }
 
 .title > div, .info >div{
 	margin: 5px 0px;
 	padding: 5px 0px;
+	display: inline;
 }
 
 #logo, #place{
@@ -122,11 +268,16 @@ a{
 }
 
 #logo, #date > div{
-	border:  5px solid black;
-	vertical-align:middle;
-	display: inline;
-	padding: 10px 10px 5px 10px;
-    border-radius: 2px;
+	border: 5px solid black;
+    border-radius: 2px 2px 2px 2px;
+    display: inline-block;
+    margin: -0.35em 0;
+    padding: 0.35em 0.35em 0.17em;
+    vertical-align: middle;
+}
+
+#logo, #date{
+	margin: 0px;
 }
 
 
@@ -139,11 +290,10 @@ a{
 }
 
 #date{
-	right: 20px;
-	bottom: -390px;
 	float: right;
 	text-align: right;
 }
+
 #description{
 	float:right;
 }
@@ -152,23 +302,31 @@ a{
     text-align: center;
 }
 
-#mail > div{
-	margin:auto;
+#mail > a{
+	   margin: 0 -50%;
+    text-decoration: none;
 }
+
 .video{
-	margin-bottom: 150px;
+	margin: 100px 0px;
+	margin-bottom: 40px;
 	display: inline-block;
     width: 100%;
     text-align: center;
-    margin-top: -20px;
 }
 
 .video iframe{
 	padding: 5px;
-	background-color: black;
+	backgsround-color: black;
     border-radius: 2px;
+    border: 5px solid black;
+    border-radius: 2px 2px 2px 2px;
+    padding: 0px;
 }
 
+.banner-cont{
+	height: 0px;
+}
 .banner{
 	text-indent: 999px;
 	background-image: url("banner.png");
